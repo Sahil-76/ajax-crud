@@ -2,9 +2,25 @@
 namespace App\Http\Controllers;
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 class EmployeeController extends Controller
 {
     function employee_add(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:employees,email',
+            'phone' => 'nullable|numeric|digits:10',
+            'address' => 'nullable|string|max:255',
+        ]);
+            if ($validator->fails()) {
+                return [
+                    'status' => 'error',
+                    'success' => false,
+                    'message' => $validator->errors(),
+                ];      
+        }
+
         $insert = [
             'name' => $request->name,
             'email'=> $request->email,

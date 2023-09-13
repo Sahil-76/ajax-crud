@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Laravel Ajax CRUD Data Table for Database with Modal Form</title>
+    <title>Laravel Ajax CRUD </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,8 +37,8 @@
                             <th>Id</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Address</th>
                             <th>Phone</th>
+                            <th>Address</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
